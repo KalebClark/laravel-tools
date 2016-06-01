@@ -1,0 +1,12 @@
+{
+    "name": "kalebclark/laravel-tools",
+    "description": "Collection of tools for my Laravel Environment",
+    "type": "Tools",
+    "authors": [
+        {
+            "name": "Kaleb Clark",
+            "email": "kaleb@abraxxus.net"
+        }
+    ],
+    "require": {}
+}
