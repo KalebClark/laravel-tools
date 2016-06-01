@@ -8,5 +8,6 @@
             "email": "kaleb@abraxxus.net"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }

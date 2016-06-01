@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace KalebClark\LaravelTools;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +23,13 @@ class LaravelToolsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->commands(
+            'KalebClark\LaravelTools\Console\RemakeDBCommand',
+            'KalebClark\LaravelTools\Console\EnvironmentCommand'
+        );
+    }
+    public function provides()
+    {
+
     }
 }
