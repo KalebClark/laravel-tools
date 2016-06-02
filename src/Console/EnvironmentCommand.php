@@ -11,7 +11,7 @@ class EnvironmentCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'tools:env:set {--show : Display the env instead of modifying files}';
+    protected $signature = 'tools:setenv {--show : Display the env instead of modifying files}';
 
     /**
      * The console command description.

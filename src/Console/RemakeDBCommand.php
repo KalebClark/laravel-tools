@@ -15,14 +15,14 @@ class RemakeDBCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'tools:db:remake';
+    protected $signature = 'tools:remakedb';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Rebuild all tables in database from migrations..';
+    protected $description = 'Rebuild all tables in database from migrations and seed';
 
     /**
      * Create a new command instance.
@@ -54,13 +54,13 @@ class RemakeDBCommand extends Command
 
         foreach($tables as $table) {
             Schema::drop($table);
-            $this->info('Dropping table: '.$table);
+            $this->info('Dropping table: <comment>'.$table.'</comment>');
         }
 
-        $this->info('Calling: migrate');
+        $this->info('Calling: <comment>migrate</comment>');
         Artisan::call('migrate');
 
-        $this->info('Calling: db:seed');
+        $this->info('Calling: <comment>db:seed</comment>');
         Artisan::call('db:seed');
 
     }
